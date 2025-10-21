@@ -1,6 +1,6 @@
-# Loan Application Service
+# Loan Service
 ## Project Overview
-**Loan Application Service** is a demo project that simulates a simple loan request management system.
+**Loan Service** is a demo project that simulates a simple loan request management system.
 It consists of a **.NET 8 Web API backend**, a **Vue 3 frontend**, and a **PostgreSQL database**, all orchestrated with **Docker Compose**.
 The goal of this project is to demonstrate practical skills in backend and frontend development, REST API design, validation, and containerized deployment.
 
@@ -22,7 +22,7 @@ The goal of this project is to demonstrate practical skills in backend and front
 
 The project follows a modular layered architecture:
 
-**Backend** provides REST endpoints for managing loan applications.
+**Backend** provides REST endpoints for managing loans.
 
 **Frontend** single-page application for viewing and creating loan requests.
 
@@ -35,9 +35,9 @@ Both backend and frontend are built and served using Docker Compose.
 
 Endpoint: `GET /api/loans`
 
-Returns all loan applications stored in the database with the following fields:
+Returns all loan stored in the database with the following fields:
 
-- Application number
+- Number
 
 - Loan amount
 
@@ -61,7 +61,7 @@ Supports **filtering parameters**:
 
 Endpoint: `POST /api/loans`
 
-Creates a new loan application.
+Creates a new loan.
 Validation rules:
 
 - `Amount > 0`
@@ -80,7 +80,7 @@ On successful creation:
 
 Endpoint: `PATCH /api/loans/{number}/`
 
-Toggles loan application status:
+Toggles loan status:
 
 - If current status = `Published` → becomes `Unpublished`
 
@@ -93,7 +93,7 @@ Updates the ModifiedAt field on every change.
 
 Displays a table of all loans with:
 
-- Application number
+- Number
 
 - Amount
 
